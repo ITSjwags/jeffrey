@@ -1,0 +1,59 @@
+{
+  "name": "jeffrey",
+  "description": "Portfolio for Jeffrey Huysentruyt",
+  "version": "0.1.0",
+  "author": "Jonathan Wagoner <jvwagoner@gmail.com>",
+  "scripts": {
+    "build": "gatsby build",
+    "clean": "rm -rf public/ .cache/",
+    "develop": "gatsby develop",
+    "lint": "eslint --ext js,jsx --ignore-path .gitignore . --fix",
+    "serve": "gatsby serve",
+    "start": "yarn develop"
+  },
+  "keywords": [
+    "jeffrey huysentruyt",
+    "portfolio",
+    "design",
+    "creative"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.10.0",
+    "gatsby": "^2.1.31",
+    "gatsby-image": "^2.0.33",
+    "gatsby-plugin-manifest": "^2.0.24",
+    "gatsby-plugin-offline": "^2.0.25",
+    "gatsby-plugin-react-helmet": "^3.0.9",
+    "gatsby-plugin-sharp": "^2.0.28",
+    "gatsby-plugin-styled-components": "^3.0.7",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
+    "gatsby-source-filesystem": "^2.0.24",
+    "gatsby-transformer-sharp": "^2.1.17",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-helmet": "^5.2.0",
+    "styled-components": "^4.1.3",
+    "styled-normalize": "^8.0.6"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.15.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "stylelint": "^9.10.1",
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ITSjwags/jeffrey"
+  },
+  "bugs": {
+    "url": "https://github.com/ITSjwags/jeffrey/issues"
+  }
+}
