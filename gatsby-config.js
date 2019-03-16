@@ -32,7 +32,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Poppins:400,700'],
+          families: ['Lora:400,700'],
         },
       },
     },
