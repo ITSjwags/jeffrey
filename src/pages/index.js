@@ -4,6 +4,7 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Bio from '../components/bio';
 import Contact from '../components/contact';
+import Work from '../components/work/work';
 
 const Wrapper = styled.div`
   margin: 0 auto;
@@ -17,6 +18,7 @@ const IndexPage = () => (
     <SEO title="Jeffrey" keywords={['jeffrey', 'huysentruyt', 'designer', 'creative']} />
     <Wrapper>
       <Bio />
+      <Work />
       <Contact />
     </Wrapper>
   </Layout>
