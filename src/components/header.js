@@ -8,12 +8,12 @@ const Container = styled.header`
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 16px;
+  padding: 16px 16px 50px 16px;
   width: 100%;
   max-width: 1280px;
 
   @media (min-width: 640px) {
-    padding: 50px 16px;
+    padding-top: 50px;
   }
 `;
 
@@ -87,13 +87,16 @@ const SwitcherInner = styled.div`
 `;
 
 const Blob = styled.div`
+  backface-visibility: hidden;
   background: ${({ theme }) => theme.colors.black};
   border-radius: 50%;
+  filter: blur(0px);
   height: 100%;
+  perspective: 1000;
   position: absolute;
   top: 0;
   left: 0;
-  transition: transform 300ms ease-out;
+  transition: transform 500ms ease-out;
   width: 100%;
 
   ${({ peek }) => peek && css`

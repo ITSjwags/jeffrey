@@ -11,11 +11,37 @@ const Wrapper = styled.div`
 `;
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: calc(100vh - 142px);
   max-width: 870px;
+
+  @media (min-width: 640px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh - 142px);
+  }
+`;
+
+const Tag = styled.div`
+  align-self: flex-start;
+  background: ${({ theme }) => theme.colors.primary};
+  border-radius: 0px 5px 5px 0px;
+  color: ${({ theme }) => theme.colors.white};
+  font-weight: bold;
+  margin-bottom: 16px;
+  padding: 3px 12px;
+  position: relative;
+
+  &::after {
+    border-bottom: 16px solid transparent;
+    border-top: 16px solid transparent;
+    border-left: 16px solid ${({ theme }) => theme.colors.primary};
+    content: "";
+    height: 0;
+    position: absolute;
+    top: 1px;
+    right: -14px;
+    width: 0;
+  }
 `;
 
 const Headline = styled.h2`
@@ -30,6 +56,7 @@ const Headline = styled.h2`
 `;
 
 const Bio = styled.p`
+  color: ${({ theme }) => theme.colors.gray};
   font-size: 20px;
 `;
 
@@ -38,6 +65,7 @@ const IndexPage = () => (
     <SEO title="Jeffrey" keywords={['jeffrey', 'huysentruyt', 'designer', 'creative']} />
     <Wrapper>
       <Container>
+        <Tag>Hey, there</Tag>
         <Headline>
           My name is Jeffrey, and I am a creative director & UI+UX designer.
         </Headline>
