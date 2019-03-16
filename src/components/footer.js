@@ -11,9 +11,14 @@ const Wrapper = styled.footer`
 const Container = styled.div`
   align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1280px;
+
+  @media (min-width: 480px) {
+    flex-direction: row;
+  }
 `;
 
 const Logo = styled.h3`
@@ -26,6 +31,7 @@ const List = styled.ul`
   grid-template-columns: repeat(4, auto);
   grid-gap: 16px;
   list-style-type: none;
+  padding: 0;
 
   @media (min-width: 640px) {
     grid-gap: 48px;
@@ -37,6 +43,7 @@ const ListItem = styled.li`
 `;
 
 const Link = styled.a`
+  font-size: 14px;
   font-weight: bold;
   overflow: hidden;
   padding: 0 2px;
@@ -59,6 +66,10 @@ const Link = styled.a`
       transform: translateX(1px);
       transition: transform 300ms ease-out;
     }
+  }
+
+  @media (min-width: 480px) {
+    font-size: 16px;
   }
 `;
 

@@ -5,7 +5,7 @@ const Container = styled.section`
   align-items: center;
   display: flex;
   min-height: 100vh;
-  max-width: 920px;
+  max-width: 930px;
 `;
 
 const Text = styled.h3`
@@ -19,9 +19,11 @@ const Text = styled.h3`
 
   > a {
     color: ${({ theme }) => theme.colors.primary};
+    font-weight: bold;
     mix-blend-mode: normal;
     position: relative;
     text-decoration: none;
+    white-space: nowrap;
 
     &::after {
       background: ${({ theme }) => theme.colors.primary};
