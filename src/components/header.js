@@ -14,6 +14,7 @@ const Container = styled.header`
 
   @media (min-width: 640px) {
     padding-top: 50px;
+    padding-bottom: 5%;
   }
 `;
 
@@ -129,6 +130,10 @@ const Header = () => {
             onClick={() => setDarkMode(!darkMode)}
             onMouseEnter={() => setPeek(true)}
             onMouseLeave={() => setPeek(false)}
+            // need these on mobile so the peek doesn't show
+            // after you click to go back to light mode
+            onFocus={() => setPeek(false)}
+            onBlur={() => setPeek(false)}
           >
             <SwitcherInner>
               {darkMode ? <IconSun /> : <IconMoon />}

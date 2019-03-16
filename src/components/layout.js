@@ -4,6 +4,7 @@ import styled, { ThemeProvider } from 'styled-components';
 import theme from '../theme';
 import GlobalStyles from './global-styles';
 import Header from './header';
+import Footer from './footer';
 
 const Content = styled.main`
   display: block;
@@ -17,9 +18,7 @@ const Layout = ({ children }) => (
       <Content>
         {children}
       </Content>
-      <footer>
-        <span>Copyright stuff footer</span>
-      </footer>
+      <Footer />
     </>
   </ThemeProvider>
 );
