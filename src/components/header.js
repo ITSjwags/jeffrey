@@ -106,7 +106,7 @@ const Blob = styled.div`
 
   ${({ darkMode }) => darkMode && css`
     transition-duration: 1s;
-    transform: scale(50);
+    transform: scale(50, 100);
 
     @media (min-width: 640px) {
       transition-duration: 2s;
