@@ -124,9 +124,8 @@ const Header = () => {
           <Blob darkMode={darkMode} peek={peek} />
           <Switcher
             onClick={() => setDarkMode(!darkMode)}
-            onMouseOver={() => setPeek(true)}
+            onMouseEnter={() => setPeek(true)}
             onMouseLeave={() => setPeek(false)}
-            onFocus={() => setPeek(true)}
           >
             <SwitcherInner>
               {darkMode ? <IconSun /> : <IconMoon />}
