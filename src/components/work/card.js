@@ -3,10 +3,14 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  background: url(${({ background }) => background}) no-repeat top center;
+  align-items: center;
   background-size: cover;
+  background: url(${({ background }) => background}) no-repeat top center;
   border-radius: 2.8em;
+  display: flex;
+  flex-direction: column;
   height: 460px;
+  justify-content: center;
   position: relative;
   width: 350px;
 `;
