@@ -27,7 +27,7 @@ const Text = styled.h3`
 
     &::after {
       background: ${({ theme }) => theme.colors.primary};
-      content: '';
+      content: "";
       height: 4px;
       position: absolute;
       bottom: 0;
@@ -39,7 +39,11 @@ const Text = styled.h3`
 
     &:hover {
       &::after {
-        transform: translateY(-19px);
+        transform: translateY(-14px);
+
+        @media (min-width: 640px) {
+          transform: translateY(-19px);
+        }
       }
     }
   }

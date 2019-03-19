@@ -106,7 +106,7 @@ const Blob = styled.div`
 
   ${({ darkMode }) => darkMode && css`
     transition-duration: 1s;
-    transform: scale(50, 100);
+    transform: scale(50, 150);
 
     @media (min-width: 640px) {
       transition-duration: 2s;
@@ -132,6 +132,7 @@ const Header = () => {
             onMouseLeave={() => setPeek(false)}
             // need these on mobile so the peek doesn't show
             // after you click to go back to light mode
+            onMouseUp={() => setPeek(false)}
             onFocus={() => setPeek(false)}
             onBlur={() => setPeek(false)}
           >

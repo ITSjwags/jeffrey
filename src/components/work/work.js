@@ -30,9 +30,11 @@ const List = styled.ul`
   padding: 0;
   width: 100%;
 
-  * {
-    mix-blend-mode: normal;
-  }
+  /* @media (min-width: 640px) {
+    * {
+      mix-blend-mode: normal;
+    }
+  } */
 `;
 
 const Work = () => (
@@ -41,13 +43,14 @@ const Work = () => (
     <List>
       {data.map(({
         id, title, subtitle, background, icon,
-      }) => (
+      }, idx) => (
         <li key={id}>
           <Card
             background={background}
             icon={icon}
             title={title}
             subtitle={subtitle}
+            index={(idx + 1)}
           />
         </li>
       ))}
