@@ -32,11 +32,49 @@ const Styles = createGlobalStyle`
   h1, h2, h3, p, span, ul, a {
     color: ${({ theme }) => theme.colors.white};
     mix-blend-mode: difference;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      /* IE10+ CSS */
+      mix-blend-mode: normal;
+    }
+    @supports (-ms-accelerator:true) {
+      /* IE Edge 12+ CSS */
+      mix-blend-mode: normal;
+    }
+    @supports (-ms-ime-align:auto) {
+      /* IE Edge 16+ CSS */
+      mix-blend-mode: normal;
+    }
   }
 
   &::selection {
     background: ${({ theme }) => theme.colors.white};
     color: ${({ theme }) => theme.colors.black};
+  }
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS */
+    [data-mode="dark"] {
+      * {
+        color: white;
+      }
+    }
+  }
+  @supports (-ms-accelerator:true) {
+    /* IE Edge 12+ CSS */
+    [data-mode="dark"] {
+      * {
+        color: white;
+      }
+    }
+  }
+  @supports (-ms-ime-align:auto) {
+    /* IE Edge 16+ CSS */
+    [data-mode="dark"] {
+      * {
+        color: white;
+      }
+    }
   }
 `;
 
