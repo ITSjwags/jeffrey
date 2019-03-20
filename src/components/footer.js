@@ -33,7 +33,7 @@ const List = styled.ul`
   list-style-type: none;
   padding: 0;
 
-  @media (min-width: 640px) {
+  @media (min-width: 768px) {
     grid-gap: 48px;
   }
 `;

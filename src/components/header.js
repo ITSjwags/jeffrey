@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
+import Helmet from 'react-helmet';
 import IconMoon from '../images/icon-moon';
 import IconSun from '../images/icon-sun';
 
@@ -12,7 +13,7 @@ const Container = styled.header`
   width: 100%;
   max-width: 1280px;
 
-  @media (min-width: 640px) {
+  @media (min-width: 768px) {
     padding-top: 50px;
     padding-bottom: 5%;
   }
@@ -32,7 +33,7 @@ const Nav = styled.nav`
   place-items: center;
   transition: grid-gap 250ms ease-out;
 
-  @media (min-width: 640px) {
+  @media (min-width: 768px) {
     grid-gap: 48px;
   }
 `;
@@ -108,7 +109,7 @@ const Blob = styled.div`
     transition-duration: 1s;
     transform: scale(50, 150);
 
-    @media (min-width: 640px) {
+    @media (min-width: 768px) {
       transition-duration: 2s;
       transform: scale(200);
     }
@@ -119,30 +120,36 @@ const Header = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [peek, setPeek] = useState(false);
   return (
-    <Container>
-      <Logo>Jeffrey</Logo>
-      <Nav>
-        <Link href=" ">resume</Link>
-        <Link href="mailto:sweetlookingstuff@gmail.com">contact</Link>
-        <Wrapper>
-          <Blob darkMode={darkMode} peek={peek} />
-          <Switcher
-            onClick={() => setDarkMode(!darkMode)}
-            onMouseEnter={() => setPeek(true)}
-            onMouseLeave={() => setPeek(false)}
-            // need these on mobile so the peek doesn't show
-            // after you click to go back to light mode
-            onMouseUp={() => setPeek(false)}
-            onFocus={() => setPeek(false)}
-            onBlur={() => setPeek(false)}
-          >
-            <SwitcherInner>
-              {darkMode ? <IconSun /> : <IconMoon />}
-            </SwitcherInner>
-          </Switcher>
-        </Wrapper>
-      </Nav>
-    </Container>
+    <>
+      <Helmet>
+        <body data-mode={darkMode ? 'dark' : 'light'} />
+      </Helmet>
+
+      <Container>
+        <Logo>Jeffrey</Logo>
+        <Nav>
+          <Link href=" ">resume</Link>
+          <Link href="mailto:sweetlookingstuff@gmail.com">contact</Link>
+          <Wrapper>
+            <Blob darkMode={darkMode} peek={peek} />
+            <Switcher
+              onClick={() => setDarkMode(!darkMode)}
+              onMouseEnter={() => setPeek(true)}
+              onMouseLeave={() => setPeek(false)}
+              // need these on mobile so the peek doesn't show
+              // after you click to go back to light mode
+              onMouseUp={() => setPeek(false)}
+              onFocus={() => setPeek(false)}
+              onBlur={() => setPeek(false)}
+            >
+              <SwitcherInner>
+                {darkMode ? <IconSun /> : <IconMoon />}
+              </SwitcherInner>
+            </Switcher>
+          </Wrapper>
+        </Nav>
+      </Container>
+    </>
   );
 };
 

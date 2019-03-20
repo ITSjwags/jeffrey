@@ -41,14 +41,14 @@ const Text = styled.h3`
       &::after {
         transform: translateY(-14px);
 
-        @media (min-width: 640px) {
+        @media (min-width: 768px) {
           transform: translateY(-19px);
         }
       }
     }
   }
 
-  @media (min-width: 640px) {
+  @media (min-width: 768px) {
     font-size: 40px;
   }
 `;

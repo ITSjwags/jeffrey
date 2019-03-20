@@ -14,7 +14,7 @@ const Headline = styled.h3`
   font-size: 32px;
   font-weight: normal;
 
-  @media (min-width: 640px) {
+  @media (min-width: 768px) {
     font-size: 40px;
   }
 `;
@@ -30,7 +30,7 @@ const List = styled.ul`
   padding: 0;
   width: 100%;
 
-  /* @media (min-width: 640px) {
+  /* @media (min-width: 768px) {
     * {
       mix-blend-mode: normal;
     }

@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   text-align: center;
   width: 277px;
 
-  @media (min-width: 640px) {
+  @media (min-width: 768px) {
     width: 350px;
   }
 `;
@@ -23,7 +23,7 @@ const Container = styled.div`
   height: 364px;
   justify-content: center;
 
-  @media (min-width: 640px) {
+  @media (min-width: 768px) {
     height: 460px;
   }
 `;
@@ -33,7 +33,7 @@ const Icon = styled.img`
   transform: scale(0.75);
   width: var(--iconWidth);
 
-  @media (min-width: 640px) {
+  @media (min-width: 768px) {
     transform: scale(1);
   }
 
@@ -81,7 +81,7 @@ const Title = styled.p`
   line-height: normal;
   margin: 30px 0 0 0;
 
-  @media (min-width: 640px) {
+  @media (min-width: 768px) {
     font-size: 32px;
   }
 `;
@@ -106,7 +106,7 @@ const Link = styled.a`
     margin-bottom: 16px;
   }
 
-  @media (min-width: 640px) {
+  @media (min-width: 768px) {
     max-width: 100%;
   }
 `;

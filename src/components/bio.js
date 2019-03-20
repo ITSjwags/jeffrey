@@ -34,7 +34,7 @@ const Headline = styled.h2`
   line-height: normal;
   margin: 0 0 30px 0;
 
-  @media (min-width: 640px) {
+  @media (min-width: 768px) {
     font-size: 48px;
   }
 `;
