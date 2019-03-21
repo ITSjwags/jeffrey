@@ -22,8 +22,8 @@ const Headline = styled.h3`
 
 const Scroller = styled.div`
   margin: 0 -16px -120px;
-  overflow: hidden;
-  overflow-x: scroll;
+  /* overflow: hidden;
+  overflow-x: scroll; */
   padding: 80px 16px 120px;
 `;
 
