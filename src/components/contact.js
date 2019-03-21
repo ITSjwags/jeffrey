@@ -14,7 +14,7 @@ const Text = styled.h3`
   mix-blend-mode: normal;
 
   > span {
-    mix-blend-mode: exclusion;
+    mix-blend-mode: difference;
   }
 
   > a {

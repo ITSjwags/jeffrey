@@ -5,7 +5,7 @@ import resumePDF from '../assets/j_huysentruyt_resume.pdf';
 const Wrapper = styled.footer`
   background: ${({ theme }) => theme.colors.white};
   color: ${({ theme }) => theme.colors.black};
-  mix-blend-mode: exclusion;
+  mix-blend-mode: difference;
   padding: 30px 16px;
 `;
 
