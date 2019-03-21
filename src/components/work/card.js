@@ -113,7 +113,7 @@ const Details = styled.div`
   justify-content: space-between;
   overflow: hidden;
   padding: 0 20px;
-  will-change: contents;
+  will-change: scroll-position;
 
   @media (min-width: 768px) {
     height: 100%;
