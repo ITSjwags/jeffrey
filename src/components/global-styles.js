@@ -31,7 +31,7 @@ const Styles = createGlobalStyle`
 
   h1, h2, h3, p, span, ul, a {
     color: ${({ theme }) => theme.colors.white};
-    mix-blend-mode: difference;
+    mix-blend-mode: exclusion;
 
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
       /* IE10+ CSS */
