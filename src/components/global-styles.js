@@ -29,7 +29,7 @@ const Styles = createGlobalStyle`
     -webkit-overflow-scrolling: touch;
   }
 
-  h1, h2, h3, p, span, ul, a {
+  h1, h2, h3, p, span, a {
     color: ${({ theme }) => theme.colors.white};
     mix-blend-mode: difference;
 
