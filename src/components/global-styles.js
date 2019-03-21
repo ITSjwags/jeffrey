@@ -59,6 +59,11 @@ const Styles = createGlobalStyle`
         color: white;
       }
     }
+    [data-mode="light"] {
+      * {
+        color: black;
+      }
+    }
   }
   @supports (-ms-accelerator:true) {
     /* IE Edge 12+ CSS */
@@ -67,12 +72,22 @@ const Styles = createGlobalStyle`
         color: white;
       }
     }
+    [data-mode="light"] {
+      * {
+        color: black;
+      }
+    }
   }
   @supports (-ms-ime-align:auto) {
     /* IE Edge 16+ CSS */
     [data-mode="dark"] {
       * {
         color: white;
+      }
+    }
+    [data-mode="light"] {
+      * {
+        color: black;
       }
     }
   }

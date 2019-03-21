@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 import Helmet from 'react-helmet';
 import IconMoon from '../images/icon-moon';
 import IconSun from '../images/icon-sun';
+import resumePDF from '../assets/j_huysentruyt_resume.pdf';
 
 const Container = styled.header`
   align-items: center;
@@ -128,7 +129,7 @@ const Header = () => {
       <Container>
         <Logo>Jeffrey</Logo>
         <Nav>
-          <Link href=" ">resume</Link>
+          <Link href={resumePDF}>resume</Link>
           <Link href="mailto:sweetlookingstuff@gmail.com">contact</Link>
           <Wrapper>
             <Blob darkMode={darkMode} peek={peek} />

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import resumePDF from '../assets/j_huysentruyt_resume.pdf';
 
 const Wrapper = styled.footer`
   background: ${({ theme }) => theme.colors.white};
@@ -79,16 +80,16 @@ const Footer = () => (
       <Logo>Jeffrey</Logo>
       <List>
         <ListItem>
-          <Link href=" ">resume</Link>
+          <Link href={resumePDF}>resume</Link>
         </ListItem>
         <ListItem>
-          <Link href=" ">behance</Link>
+          <Link href="https://www.behance.net/therealmcjeffy" target="_blank">behance</Link>
         </ListItem>
         <ListItem>
-          <Link href=" ">linkedin</Link>
+          <Link href="https://www.linkedin.com/in/therealmcjeffy/" target="_blank">linkedin</Link>
         </ListItem>
         <ListItem>
-          <Link href=" ">instagram</Link>
+          <Link href="https://www.instagram.com/therealmcjeffy/" target="_blank">instagram</Link>
         </ListItem>
       </List>
     </Container>

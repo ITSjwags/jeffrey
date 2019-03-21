@@ -13,10 +13,18 @@ const Container = styled.section`
 const Headline = styled.h3`
   font-size: 32px;
   font-weight: normal;
+  margin-bottom: 0;
 
   @media (min-width: 768px) {
     font-size: 40px;
   }
+`;
+
+const Scroller = styled.div`
+  margin: 0 -16px -120px;
+  overflow: hidden;
+  overflow-x: scroll;
+  padding: 80px 16px 120px;
 `;
 
 const List = styled.ul`
@@ -24,9 +32,8 @@ const List = styled.ul`
   grid-auto-flow: column;
   grid-gap: 32px;
   grid-template-rows: auto;
+  margin: 0;
   mix-blend-mode: normal;
-  overflow: hidden;
-  overflow-x: scroll;
   padding: 0;
   width: 100%;
 
@@ -40,21 +47,24 @@ const List = styled.ul`
 const Work = () => (
   <Container>
     <Headline>Selected Work</Headline>
-    <List>
-      {data.map(({
-        id, title, subtitle, background, icon,
-      }, idx) => (
-        <li key={id}>
-          <Card
-            background={background}
-            icon={icon}
-            title={title}
-            subtitle={subtitle}
-            index={(idx + 1)}
-          />
-        </li>
-      ))}
-    </List>
+    <Scroller>
+      <List>
+        {data.map(({
+          id, title, subtitle, background, icon, url,
+        }, idx) => (
+          <li key={id}>
+            <Card
+              background={background}
+              icon={icon}
+              title={title}
+              subtitle={subtitle}
+              url={url}
+              index={(idx + 1)}
+            />
+          </li>
+        ))}
+      </List>
+    </Scroller>
   </Container>
 );
 

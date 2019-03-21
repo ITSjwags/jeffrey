@@ -18,9 +18,9 @@ const data = [
     id: 1,
     background: bgGB,
     icon: iconGB,
-    title: 'Men\'s Subscription Box Startup',
+    title: "Men's Subscription Box Startup",
     subtitle: 'Brand & Package Design',
-    url: '',
+    url: 'https://www.behance.net/gallery/77752481/Mens-Subscription-Box-Startup',
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ const data = [
     icon: iconGM,
     title: 'Lead Capture Autoshow iOS app',
     subtitle: 'UI+UX Design',
-    url: '',
+    url: 'https://www.behance.net/gallery/77752753/Lead-Capture-Autoshow-iOS-App',
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const data = [
     icon: iconRP,
     title: 'Job Post Web App',
     subtitle: 'Creative Direction & UI+UX Design',
-    url: '',
+    url: 'https://www.behance.net/gallery/77489637/Job-Post-Web-App',
   },
   {
     id: 4,
@@ -44,7 +44,7 @@ const data = [
     icon: iconLE,
     title: 'Enterprise Sales Software',
     subtitle: 'Brand, Website & UI+UX Design',
-    url: '',
+    url: 'https://www.behance.net/gallery/77498419/Enterprise-Sales-Software',
   },
   {
     id: 5,
@@ -52,7 +52,7 @@ const data = [
     icon: iconBW,
     title: 'Live Event & AV Technology Company',
     subtitle: 'Brand, Website & UI+UX Design',
-    url: '',
+    url: 'https://www.behance.net/gallery/77751981/Live-Event-AV-Technology-Company',
   },
   {
     id: 6,
@@ -60,7 +60,7 @@ const data = [
     icon: iconNB,
     title: 'IoT Web Platform',
     subtitle: 'Brand & UI+UX Design',
-    url: '',
+    url: 'https://www.behance.net/gallery/77752993/AV-Integration-IoT-Platform',
   },
   {
     id: 7,
@@ -68,7 +68,7 @@ const data = [
     icon: iconEF,
     title: 'Marketing & Web Development Agency',
     subtitle: 'Agency Rebrand',
-    url: '',
+    url: 'https://www.behance.net/gallery/77752217/Marketing-Web-Development-Agency',
   },
 ];
 
