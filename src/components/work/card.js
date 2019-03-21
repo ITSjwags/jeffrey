@@ -129,6 +129,7 @@ const Details = styled.div`
 
 const Title = styled.p`
   font-size: 24px;
+  isolation: isolate;
   line-height: normal;
   margin: 30px 0 0 0;
 
@@ -148,6 +149,7 @@ const Title = styled.p`
 const SubTitle = styled.p`
   font-size: 16px;
   font-weight: bold;
+  isolation: isolate;
   margin: 8px 0 0 0;
 
   @media (min-width: 768px) {
@@ -167,6 +169,7 @@ const Link = styled.a`
   display: flex;
   flex-direction: column;
   font-size: 14px;
+  isolation: isolate;
   justify-content: center;
   margin-top: 40px;
   text-decoration: none;
@@ -183,9 +186,9 @@ const Link = styled.a`
     transition-delay: 0;
 
     ${({ isHovering }) => isHovering && css`
-      transform: translateY(-40px);
-      transition-delay: 200ms;
-    `};
+        transform: translateY(-40px);
+        transition-delay: 200ms;
+      `};
   }
 `;
 
