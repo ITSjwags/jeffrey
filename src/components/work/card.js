@@ -27,6 +27,7 @@ const Container = styled.div`
   flex-direction: column;
   height: 364px;
   justify-content: center;
+  mix-blend-mode: normal;
 
   @media (min-width: 768px) {
     height: 460px;

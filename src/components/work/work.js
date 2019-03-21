@@ -32,16 +32,10 @@ const List = styled.ul`
   grid-auto-flow: column;
   grid-gap: 32px;
   grid-template-rows: auto;
+  list-style-type: none;
   margin: 0;
-  mix-blend-mode: normal;
   padding: 0;
   width: 100%;
-
-  /* @media (min-width: 768px) {
-    * {
-      mix-blend-mode: normal;
-    }
-  } */
 `;
 
 const Work = () => (
