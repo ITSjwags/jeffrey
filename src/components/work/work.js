@@ -21,22 +21,28 @@ const Headline = styled.h3`
 `;
 
 const Scroller = styled.div`
-  margin: 0 -16px -120px;
-  overflow: hidden;
-  overflow-x: scroll;
-  padding: 80px 16px 120px;
+  @media (min-width: 768px) {
+    margin: 0 -16px -120px;
+    overflow: hidden;
+    overflow-x: scroll;
+    padding: 80px 16px 120px;
+  }
 `;
 
 const List = styled.ul`
   display: grid;
-  grid-auto-flow: column;
   grid-gap: 32px;
   grid-template-rows: auto;
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 32px 0;
+  place-items: center;
   width: 100%;
-  will-change: scroll-position;
+
+  @media (min-width: 768px) {
+    grid-auto-flow: column;
+    padding: 0;
+  }
 `;
 
 const Work = () => (
