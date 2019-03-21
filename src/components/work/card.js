@@ -113,6 +113,7 @@ const Details = styled.div`
   justify-content: space-between;
   overflow: hidden;
   padding: 0 20px;
+  position: relative;
 
   @media (min-width: 768px) {
     height: 100%;
@@ -131,7 +132,6 @@ const Title = styled.p`
   font-size: 24px;
   line-height: normal;
   margin: 30px 0 0 0;
-  will-change: scroll-position;
 
   @media (min-width: 768px) {
     font-size: 32px;
@@ -150,7 +150,6 @@ const SubTitle = styled.p`
   font-size: 16px;
   font-weight: bold;
   margin: 8px 0 0 0;
-  will-change: scroll-position;
 
   @media (min-width: 768px) {
     transform: translateY(-200px);
@@ -173,7 +172,6 @@ const Link = styled.a`
   margin-top: 40px;
   text-decoration: none;
   max-width: 140px;
-  will-change: scroll-position;
 
   > span {
     margin-bottom: 16px;

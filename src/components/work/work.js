@@ -36,6 +36,7 @@ const List = styled.ul`
   margin: 0;
   padding: 0;
   width: 100%;
+  will-change: scroll-position;
 `;
 
 const Work = () => (
