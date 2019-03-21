@@ -130,7 +130,7 @@ const Title = styled.p`
   font-size: 24px;
   line-height: normal;
   margin: 30px 0 0 0;
-  mix-blend-mode: normal;
+  mix-blend-mode: difference;
 
   @media (min-width: 768px) {
     font-size: 32px;
@@ -149,7 +149,7 @@ const SubTitle = styled.p`
   font-size: 16px;
   font-weight: bold;
   margin: 8px 0 0 0;
-  mix-blend-mode: normal;
+  mix-blend-mode: difference;
 
   @media (min-width: 768px) {
     transform: translateY(-200px);
@@ -170,7 +170,7 @@ const Link = styled.a`
   font-size: 14px;
   justify-content: center;
   margin-top: 40px;
-  mix-blend-mode: normal;
+  mix-blend-mode: difference;
   text-decoration: none;
   max-width: 140px;
 
