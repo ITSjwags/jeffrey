@@ -25,6 +25,7 @@ const Scroller = styled.div`
   overflow: hidden;
   overflow-x: scroll;
   padding: 80px 16px 120px;
+  will-change: contents;
 `;
 
 const List = styled.ul`
