@@ -208,7 +208,7 @@ const Card = (props) => {
           <Title isHovering={hover}>{title}</Title>
           <SubTitle isHovering={hover}>{subtitle}</SubTitle>
         </span>
-        <Link href={url} target="_blank" isHovering={hover}>
+        <Link href={url} isHovering={hover} target="_blank" rel="noreferrer">
           <span>VIEW CASESTUDY ON BEHANCE</span>
           <Arrow />
         </Link>

@@ -138,6 +138,7 @@ const Header = () => {
           <Wrapper>
             <Blob darkMode={darkMode} peek={peek} />
             <Switcher
+              name="modeSwitcher"
               onClick={() => setDarkMode(!darkMode)}
               onMouseEnter={() => setPeek(true)}
               onMouseLeave={() => setPeek(false)}

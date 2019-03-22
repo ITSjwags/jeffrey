@@ -85,13 +85,13 @@ const Footer = () => (
           <Link href={resumePDF}>resume</Link>
         </ListItem>
         <ListItem>
-          <Link href="https://www.behance.net/therealmcjeffy" target="_blank">behance</Link>
+          <Link href="https://www.behance.net/therealmcjeffy" target="_blank" rel="noreferrer">behance</Link>
         </ListItem>
         <ListItem>
-          <Link href="https://www.linkedin.com/in/therealmcjeffy/" target="_blank">linkedin</Link>
+          <Link href="https://www.linkedin.com/in/therealmcjeffy/" target="_blank" rel="noreferrer">linkedin</Link>
         </ListItem>
         <ListItem>
-          <Link href="https://www.instagram.com/therealmcjeffy/" target="_blank">instagram</Link>
+          <Link href="https://www.instagram.com/therealmcjeffy/" target="_blank" rel="noreferrer">instagram</Link>
         </ListItem>
       </List>
     </Container>
