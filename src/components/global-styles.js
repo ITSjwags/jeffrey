@@ -15,6 +15,7 @@ const Styles = createGlobalStyle`
 
   body {
     font-family: 'Lora', sans-serif;
+    font-display: swap;
     font-size: 16px;
     line-height: 1.75;
   }
