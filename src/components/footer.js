@@ -46,6 +46,7 @@ const ListItem = styled.li`
 const Link = styled.a`
   font-size: 14px;
   font-weight: bold;
+  outline: 0;
   overflow: hidden;
   padding: 0 2px;
   position: relative;
@@ -62,7 +63,8 @@ const Link = styled.a`
     width: 100%;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     &::after {
       transform: translateX(1px);
       transition: transform 300ms ease-out;

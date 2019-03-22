@@ -41,6 +41,7 @@ const Nav = styled.nav`
 
 const Link = styled.a`
   font-weight: bold;
+  outline: 0;
   overflow: hidden;
   padding: 0 2px;
   position: relative;
@@ -58,7 +59,8 @@ const Link = styled.a`
     width: 100%;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     &::after {
       transform: translateX(1px);
       transition: transform 300ms ease-out;
@@ -142,7 +144,7 @@ const Header = () => {
               // need these on mobile so the peek doesn't show
               // after you click to go back to light mode
               onMouseUp={() => setPeek(false)}
-              onFocus={() => setPeek(false)}
+              onFocus={() => setPeek(true)}
               onBlur={() => setPeek(false)}
             >
               <SwitcherInner>

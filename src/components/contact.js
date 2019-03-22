@@ -21,6 +21,7 @@ const Text = styled.h3`
     color: ${({ theme }) => theme.colors.primary};
     font-weight: bold;
     mix-blend-mode: normal;
+    outline: none;
     position: relative;
     text-decoration: none;
     white-space: nowrap;
@@ -37,7 +38,8 @@ const Text = styled.h3`
       width: 100%;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       &::after {
         transform: translateY(-14px);
 
