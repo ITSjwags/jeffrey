@@ -11,12 +11,16 @@ const Container = styled.section`
 `;
 
 const Headline = styled.h3`
+  font-family: "Lora", sans-serif;
   font-size: 32px;
   font-weight: normal;
-  margin-bottom: 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1280px;
 
   @media (min-width: 768px) {
     font-size: 40px;
+    line-height: 1;
   }
 `;
 
@@ -51,12 +55,11 @@ const ListItem = styled.li`
   width: 100%;
 
   &::after {
-    background: ${({ theme }) => theme.colors.white};
-    content: '';
+    background: ${({ theme }) => theme.colors.gray};
+    content: "";
     height: 1px;
-    mix-blend-mode: difference;
     position: absolute;
-    bottom: -40px;
+    bottom: -38px;
     left: 0;
     width: 100%;
   }

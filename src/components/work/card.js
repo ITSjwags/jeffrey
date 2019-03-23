@@ -36,25 +36,25 @@ const Container = styled.div`
 
     ${({ isHovering }) => isHovering && css`
       ${({ index }) => index === 1 && css`
-        box-shadow: 0px 60px 60px rgba(51, 51, 51, 0.3);
-      `};
-      ${({ index }) => index === 2 && css`
         box-shadow: 0px 60px 60px rgba(13, 93, 187, 0.3);
       `};
-      ${({ index }) => index === 3 && css`
+      ${({ index }) => index === 2 && css`
         box-shadow: 0px 60px 60px rgba(57, 28, 132, 0.3);
       `};
-      ${({ index }) => index === 4 && css`
+      ${({ index }) => index === 3 && css`
         box-shadow: 0px 60px 60px rgba(42, 52, 73, 0.3);
       `};
-      ${({ index }) => index === 5 && css`
+      ${({ index }) => index === 4 && css`
         box-shadow: 0px 60px 60px rgba(10, 24, 73, 0.3);
       `};
-      ${({ index }) => index === 6 && css`
+      ${({ index }) => index === 5 && css`
         box-shadow: 0px 60px 60px rgba(23, 23, 23, 0.3);
       `};
-      ${({ index }) => index === 7 && css`
+      ${({ index }) => index === 6 && css`
         box-shadow: 0px 60px 60px rgba(35, 52, 63, 0.3);
+      `};
+      ${({ index }) => index === 7 && css`
+        box-shadow: 0px 60px 60px rgba(51, 51, 51, 0.3);
       `};
     `}
   }
@@ -77,30 +77,26 @@ const Icon = styled.img`
   }
 
   ${({ index }) => index === 1 && css`
-    --iconWidth: 190px;
+    --iconWidth: 212px;
+    margin: 10% 0 0 10%;
   `};
   ${({ index }) => index === 2 && css`
-    --iconWidth: 212px;
-    /* margin: 35px 0 0 35px; */
-    margin: 10% 0 0 10%;
+    --iconWidth: 228px;
+    margin: 18% 0 0 12.5%;
   `};
   ${({ index }) => index === 3 && css`
     --iconWidth: 228px;
-    /* margin: 50px 0 0 35px; */
     margin: 18% 0 0 12.5%;
   `};
   ${({ index }) => index === 4 && css`
-    --iconWidth: 228px;
-    /* margin: 50px 0 0 35px; */
-    margin: 18% 0 0 12.5%;
-  `};
-  ${({ index }) => index === 5 && css`
     --iconWidth: 212px;
-    /* margin: 35px 0 0 35px; */
     margin: 10% 0 0 10%;
   `};
-  ${({ index }) => index === 6 && css`
+  ${({ index }) => index === 5 && css`
     --iconWidth: 301px;
+  `};
+  ${({ index }) => index === 6 && css`
+    --iconWidth: 190px;
   `};
   ${({ index }) => index === 7 && css`
     --iconWidth: 190px;
@@ -129,17 +125,20 @@ const Details = styled.div`
 `;
 
 const Title = styled.p`
+  font-family: 'Lora', sans-serif;
   font-size: 24px;
   line-height: normal;
   margin: 30px 0 0 0;
 
   @media (min-width: 768px) {
     font-size: 32px;
-    transform: translateY(-200px);
-    transition: transform 300ms ease-out;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: transform 300ms ease-out, opacity 300ms ease-out;
     transition-delay: 0;
 
     ${({ isHovering }) => isHovering && css`
+      opacity: 1;
       transform: translateY(80px);
       transition-delay: 200ms;
     `};
@@ -149,14 +148,16 @@ const Title = styled.p`
 const SubTitle = styled.p`
   font-size: 16px;
   font-weight: bold;
-  margin: 8px 0 0 0;
+  margin: 8px 30px 0;
 
   @media (min-width: 768px) {
-    transform: translateY(-200px);
-    transition: transform 300ms ease-out;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: transform 300ms ease-out, opacity 300ms ease-out;
     transition-delay: 0;
 
     ${({ isHovering }) => isHovering && css`
+      opacity: 1;
       transform: translateY(80px);
       transition-delay: 100ms;
     `};
@@ -171,19 +172,20 @@ const Link = styled.a`
   justify-content: center;
   margin-top: 40px;
   text-decoration: none;
-  max-width: 140px;
 
   > span {
     margin-bottom: 16px;
   }
 
   @media (min-width: 768px) {
-    max-width: 100%;
-    transform: translateY(100px);
-    transition: transform 300ms ease-out;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: transform 300ms ease-out, opacity 300ms ease-out;
     transition-delay: 0;
+    max-width: 100%;
 
     ${({ isHovering }) => isHovering && css`
+      opacity: 1;
       transform: translateY(-40px);
       transition-delay: 200ms;
     `};

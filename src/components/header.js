@@ -12,7 +12,7 @@ const Container = styled.header`
   margin: 0 auto;
   padding: 16px 16px 50px 16px;
   width: 100%;
-  max-width: 1280px;
+  max-width: calc(1280px + 32px);
 
   @media (min-width: 768px) {
     padding-top: 50px;
@@ -111,8 +111,8 @@ const Blob = styled.div`
   `};
 
   ${({ darkMode }) => darkMode && css`
-    transition-duration: 1s;
-    transform: scale(55, 400);
+    transition-duration: 4s;
+    transform: scale(400);
 
     @media (min-width: 768px) {
       transition-duration: 2s;

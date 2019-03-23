@@ -2,7 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.section`
-  max-width: 870px;
+  min-height: 100vh;
+  margin: 0 auto;
+  max-width: 1280px;
 `;
 
 const Tag = styled.div`
@@ -29,10 +31,12 @@ const Tag = styled.div`
 `;
 
 const Headline = styled.h2`
+  font-family: "Lora", sans-serif;
   font-size: 36px;
   font-weight: normal;
   line-height: normal;
   margin: 0 0 30px 0;
+  max-width: 870px;
 
   @media (min-width: 768px) {
     font-size: 48px;
@@ -42,6 +46,7 @@ const Headline = styled.h2`
 const Blurb = styled.p`
   color: ${({ theme }) => theme.colors.gray};
   font-size: 20px;
+  max-width: 870px;
 `;
 
 const Bio = () => (

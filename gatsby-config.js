@@ -32,7 +32,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Lora:400,700'],
+          families: ['Lora:400,700', 'Work Sans:400, 600'],
         },
       },
     },

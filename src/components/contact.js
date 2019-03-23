@@ -5,13 +5,16 @@ const Container = styled.section`
   align-items: center;
   display: flex;
   min-height: 100vh;
-  max-width: 930px;
+  margin: 0 auto;
+  max-width: 1280px;
 `;
 
 const Text = styled.h3`
+  font-family: "Lora", sans-serif;
   font-size: 32px;
   font-weight: normal;
   mix-blend-mode: normal;
+  max-width: 930px;
 
   > span {
     mix-blend-mode: difference;

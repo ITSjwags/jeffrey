@@ -1,23 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 import theme from '../theme';
 import GlobalStyles from './global-styles';
 import Header from './header';
 import Footer from './footer';
-
-const Content = styled.main`
-  display: block;
-`;
 
 const Layout = ({ children }) => (
   <ThemeProvider theme={theme}>
     <>
       <GlobalStyles />
       <Header />
-      <Content>
+      <main>
         {children}
-      </Content>
+      </main>
       <Footer />
     </>
   </ThemeProvider>

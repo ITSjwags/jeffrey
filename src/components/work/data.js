@@ -16,14 +16,6 @@ import iconEF from '../../images/icon-work-ef.png';
 const data = [
   {
     id: 1,
-    background: bgGB,
-    icon: iconGB,
-    title: "Men's Subscription Box Startup",
-    subtitle: 'Brand & Package Design',
-    url: 'https://www.behance.net/gallery/77752481/Mens-Subscription-Box-Startup',
-  },
-  {
-    id: 2,
     background: bgGM,
     icon: iconGM,
     title: 'Lead Capture Autoshow iOS app',
@@ -31,7 +23,7 @@ const data = [
     url: 'https://www.behance.net/gallery/77752753/Lead-Capture-Autoshow-iOS-App',
   },
   {
-    id: 3,
+    id: 2,
     background: bgRP,
     icon: iconRP,
     title: 'Job Post Web App',
@@ -39,7 +31,7 @@ const data = [
     url: 'https://www.behance.net/gallery/77489637/Job-Post-Web-App',
   },
   {
-    id: 4,
+    id: 3,
     background: bgLE,
     icon: iconLE,
     title: 'Enterprise Sales Software',
@@ -47,7 +39,7 @@ const data = [
     url: 'https://www.behance.net/gallery/77498419/Enterprise-Sales-Software',
   },
   {
-    id: 5,
+    id: 4,
     background: bgBW,
     icon: iconBW,
     title: 'Live Event & AV Technology Company',
@@ -55,7 +47,7 @@ const data = [
     url: 'https://www.behance.net/gallery/77751981/Live-Event-AV-Technology-Company',
   },
   {
-    id: 6,
+    id: 5,
     background: bgNB,
     icon: iconNB,
     title: 'IoT Web Platform',
@@ -63,12 +55,20 @@ const data = [
     url: 'https://www.behance.net/gallery/77752993/AV-Integration-IoT-Platform',
   },
   {
-    id: 7,
+    id: 6,
     background: bgEF,
     icon: iconEF,
     title: 'Marketing & Web Development Agency',
     subtitle: 'Agency Rebrand',
     url: 'https://www.behance.net/gallery/77752217/Marketing-Web-Development-Agency',
+  },
+  {
+    id: 7,
+    background: bgGB,
+    icon: iconGB,
+    title: "Men's Subscription Box Startup",
+    subtitle: 'Brand & Package Design',
+    url: 'https://www.behance.net/gallery/77752481/Mens-Subscription-Box-Startup',
   },
 ];
 
