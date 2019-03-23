@@ -31,7 +31,7 @@ const Scroller = styled.div`
 
 const List = styled.ul`
   display: grid;
-  grid-gap: 32px;
+  grid-gap: 80px;
   grid-template-rows: auto;
   list-style-type: none;
   margin: 0;
@@ -40,8 +40,31 @@ const List = styled.ul`
   width: 100%;
 
   @media (min-width: 768px) {
+    grid-gap: 32px;
     grid-auto-flow: column;
     padding: 0;
+  }
+`;
+
+const ListItem = styled.li`
+  position: relative;
+  width: 100%;
+
+  &::after {
+    background: ${({ theme }) => theme.colors.white};
+    content: '';
+    height: 1px;
+    mix-blend-mode: difference;
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    &:after {
+      display: none;
+    }
   }
 `;
 
@@ -53,7 +76,7 @@ const Work = () => (
         {data.map(({
           id, title, subtitle, background, icon, url,
         }, idx) => (
-          <li key={id}>
+          <ListItem key={id}>
             <Card
               background={background}
               icon={icon}
@@ -62,7 +85,7 @@ const Work = () => (
               url={url}
               index={(idx + 1)}
             />
-          </li>
+          </ListItem>
         ))}
       </List>
     </Scroller>

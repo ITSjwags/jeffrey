@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 import Arrow from '../../images/icon-arrow';
 
 const Wrapper = styled.div`
+  margin: 0 auto;
   position: relative;
   text-align: center;
   width: 277px;
