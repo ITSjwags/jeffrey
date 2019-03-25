@@ -1,10 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
+import IconArrow from '../images/icon-arrow';
 
 const Container = styled.section`
-  min-height: 100vh;
+  min-height: calc(100vh - 160px); /* height minus header*/
   margin: 0 auto;
+  position: relative;
   max-width: 1280px;
+
+  @media (min-width: 768px) {
+    padding-right: 70px;
+  }
 `;
 
 const Tag = styled.div`
@@ -49,6 +55,27 @@ const Blurb = styled.p`
   max-width: 870px;
 `;
 
+const ScrollIndicator = styled.div`
+  display: none;
+
+  @media (min-width: 768px) {
+    align-items: center;
+    display: flex;
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    writing-mode: vertical-rl;
+
+    > span {
+      margin-bottom: 40px;
+    }
+
+    > svg {
+      transform: rotate(90deg);
+    }
+  }
+`;
+
 const Bio = () => (
   <Container>
     <Tag>Hey, there</Tag>
@@ -63,6 +90,10 @@ const Bio = () => (
       I have a strong passion for leading teams to create amazing products
       and brands with a human-centered design approach.
     </Blurb>
+    <ScrollIndicator>
+      <span>You know what to do</span>
+      <IconArrow color="white" />
+    </ScrollIndicator>
   </Container>
 );
 
