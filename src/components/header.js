@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 import Helmet from 'react-helmet';
 import IconMoon from '../images/icon-moon';
@@ -121,42 +121,62 @@ const Blob = styled.div`
   `};
 `;
 
-const Header = () => {
-  const [darkMode, setDarkMode] = useState(false);
-  const [peek, setPeek] = useState(false);
-  return (
-    <>
-      <Helmet>
-        <body data-mode={darkMode ? 'dark' : 'light'} />
-      </Helmet>
+class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      darkMode: false,
+      peek: false,
+    };
+  }
 
-      <Container>
-        <Logo>Jeffrey</Logo>
-        <Nav>
-          <Link href={resumePDF}>resume</Link>
-          <Link href="mailto:sweetlookingstuff@gmail.com">contact</Link>
-          <Wrapper>
-            <Blob darkMode={darkMode} peek={peek} />
-            <Switcher
-              name="modeSwitcher"
-              onClick={() => setDarkMode(!darkMode)}
-              onMouseEnter={() => setPeek(true)}
-              onMouseLeave={() => setPeek(false)}
-              // need these on mobile so the peek doesn't show
-              // after you click to go back to light mode
-              onMouseUp={() => setPeek(false)}
-              onFocus={() => setPeek(true)}
-              onBlur={() => setPeek(false)}
-            >
-              <SwitcherInner>
-                {darkMode ? <IconSun /> : <IconMoon />}
-              </SwitcherInner>
-            </Switcher>
-          </Wrapper>
-        </Nav>
-      </Container>
-    </>
-  );
-};
+  componentDidMount() {
+    this.setModeBasedOnTime();
+  }
+
+  setModeBasedOnTime = () => {
+    const today = new Date();
+    const time = today.getHours();
+    if (time < 8 || time >= 17) this.setState({ darkMode: true });
+  };
+
+  render() {
+    const { darkMode, peek } = this.state;
+
+    return (
+      <>
+        <Helmet>
+          <body data-mode={darkMode ? 'dark' : 'light'} />
+        </Helmet>
+
+        <Container>
+          <Logo>Jeffrey</Logo>
+          <Nav>
+            <Link href={resumePDF}>resume</Link>
+            <Link href="mailto:sweetlookingstuff@gmail.com">contact</Link>
+            <Wrapper>
+              <Blob darkMode={darkMode} peek={peek} />
+              <Switcher
+                name="modeSwitcher"
+                onClick={() => this.setState({ darkMode: !darkMode })}
+                onMouseEnter={() => this.setState({ peek: true })}
+                onMouseLeave={() => this.setState({ peek: false })}
+                // need these on mobile so the peek doesn't show
+                // after you click to go back to light mode
+                onMouseUp={() => this.setState({ peek: false })}
+                onFocus={() => this.setState({ peek: true })}
+                onBlur={() => this.setState({ peek: false })}
+              >
+                <SwitcherInner>
+                  {darkMode ? <IconSun /> : <IconMoon />}
+                </SwitcherInner>
+              </Switcher>
+            </Wrapper>
+          </Nav>
+        </Container>
+      </>
+    );
+  }
+}
 
 export default Header;
