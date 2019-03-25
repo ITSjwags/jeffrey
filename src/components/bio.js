@@ -71,6 +71,7 @@ const ScrollIndicator = styled.div`
     }
 
     > svg {
+      mix-blend-mode: difference;
       transform: rotate(90deg);
     }
   }
