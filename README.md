@@ -3,8 +3,8 @@ A [Gatsby v2](https://www.gatsbyjs.org/) powered website based on [gatsby-starte
 
 It follows the [JAMstack architecture](https://jamstack.org) with [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution.
 
-## Prototype
-[Jeffrey Website Link](https://jeffrey.com/)
+## Website
+[Jeffrey Website Link](https://iamjeffrey.design/)
 
 ## Features
 * Styled Components for styling
